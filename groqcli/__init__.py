@@ -3,4 +3,4 @@
 # allows them to access modules afterwards, like:
 #   import groqcli
 #   x = groqcli.foo.func()
-import groqcli.foo as foo
+import groqcli.groqcli as groqcli
