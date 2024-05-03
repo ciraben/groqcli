@@ -1,0 +1,17 @@
+# python venv stuff
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# vim stuff
+*.swp
+
+# mac stuff
+.DS_Store
+
+# python stuff
+__pycache__

@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "groqcli"
+version = "0.0.1"
+description = "A command line tool for requesting chat completions from LLMs through Groq."
+authors = ["tommo <->"]
+readme = "README.md"
+license = "Hippocratic-3.0"
+packages = [{include = "groqcli"}]
+
+[tool.poetry.dependencies]
+python = "^3.9.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
