@@ -1,37 +1,32 @@
 import os
 from groq import Groq
 
-def foo():
-    """Summary line.
+def complete(content: String = "Explain the importance of fast language models"):
+    """Print some content's completion to the terminal.
 
     Extended description of function.
 
     Args:
-        foo (str): Description of arg1
+        content (str): Some text to be passed to an LLM for completion.
 
     Returns:
-        str: Description of return value
+        None
     """
 
     client = Groq(
         api_key=os.environ.get("GROQ_API_KEY"),
     )
-
     chat_completion = client.chat.completions.create(
         messages=[
             {
                 "role": "user",
-                "content": "Explain the importance of fast language models",
+                "content": query,
             }
         ],
         model="mixtral-8x7b-32768",
     )
-
     print(chat_completion.choices[0].message.content)
-
-
-    return "foo"
-
+    return
 
 if __name__ == "__main__":
-    foo()
+    complete()
