@@ -8,8 +8,11 @@ license = "Hippocratic-3.0"
 packages = [{include = "groqcli"}]
 
 [tool.poetry.dependencies]
-python = "^3.9.6"
+python = "^3.9"
+groq = "^0.5.0"
 
+[tool.poetry.scripts]
+groq = "groqcli.cli:main"
 
 [build-system]
 requires = ["poetry-core"]

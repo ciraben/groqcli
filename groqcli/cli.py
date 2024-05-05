@@ -1,5 +1,5 @@
 import argparse
-from groqcli import get_completion
+from .groqcli import get_completion
 
 def main():
     parser = argparse.ArgumentParser(
