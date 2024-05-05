@@ -5,7 +5,7 @@ def get_completion(
         content: str = "Explain the importance of fast language models",
         prompt: str = "you are a helpful assistant.",
         # model: str = "mixtral-8x7b-32768",
-        model: str = "llama3-8b-8192",
+        model: str = "llama3-70b-8192",
         max_tokens: int = 50,
         temperature: float = 1
     ):
