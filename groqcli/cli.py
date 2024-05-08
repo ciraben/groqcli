@@ -1,4 +1,5 @@
 import argparse
+import sys
 from .groqcli import get_completion
 
 def main():
@@ -18,8 +19,12 @@ def main():
     )
 
     args = parser.parse_args()
-    # print()
-    # return
+
+    # append any piped args
+    # isatty breaks on windows; this could be improved
+    if not sys.stdin.isatty():
+        args = parser.parse_args(sys.stdin, args)
+
     response = get_completion(
         content = ' '.join(args.content)
     )
