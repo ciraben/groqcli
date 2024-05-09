@@ -5,7 +5,7 @@ from .defaults import DEFAULT
 
 def main():
     parser = argparse.ArgumentParser(
-        description=""
+        description="A command line tool for chatting with LLMs through Groq."
     )
     parser.add_argument(
         "-p", "--prompt",
