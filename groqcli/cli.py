@@ -46,9 +46,10 @@ def main():
     if not sys.stdin.isatty():
         args = parser.parse_args(sys.stdin, args)
 
-    response = get_completion(
-        content = ' '.join(args.content)
-    )
+    args.content = ' '.join(args.content)
+    # print(vars(args))
+
+    response = get_completion(**vars(args))
     print(response)
 
 if __name__ == "__main__":
