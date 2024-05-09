@@ -42,7 +42,8 @@ def get_completion(
             }
         ],
         model=model,
-        max_tokens=max_tokens
+        max_tokens=max_tokens,
+        temperature=temperature
     )
     return chat_completion.choices[0].message.content
 
